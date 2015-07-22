@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Tip Calculator</string>
+    <string name="action_settings"> tempName </string>
+
+    <string name="MealPriceHint">Enter the total price of your meal</string>
+    <string name="TipRateHint">Enter the tip rate you want to pay</string>
+    <string name="PeopleTotalHint">Enter the number of people</string>
+    <string name="Submit">Submit</string>
+
+    <string name="BillTitle"> Your Bill </string>
+    <string name="MealPriceBill"> Meal Price: </string>
+    <string name="TaxRateBill"> Taxes: </string>
+    <string name="TipRateBill"> Tips: </string>
+    <string name="finalTotal"> Total: </string>
+</resources>
