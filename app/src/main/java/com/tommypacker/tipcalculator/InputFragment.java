@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.zip.Inflater;
 
@@ -24,7 +25,6 @@ public class InputFragment extends Fragment {
         View view = inflater.inflate(R.layout.input_layout, container, false);
         price = (EditText) view.findViewById(R.id.MealPrice);
         rate = (EditText) view.findViewById(R.id.TipRate);
-        numPeople = (EditText) view.findViewById(R.id.PeopleTotal);
 
         Button b = (Button) view.findViewById(R.id.SubmitButton);
         b.setOnClickListener(new View.OnClickListener() {
@@ -53,9 +53,13 @@ public class InputFragment extends Fragment {
     public void calculateValues(){
         double mealPrice = Double.parseDouble(price.getText().toString());
         int tipRate = Integer.parseInt(rate.getText().toString());
-        int numberOfPeople = Integer.parseInt(numPeople.getText().toString());
 
-        double resultFromCalculator = Calculator.tipsPerPerson(mealPrice, tipRate, numberOfPeople);
+        if(mealPrice < 0 || tipRate < 0){
+            Toast.makeText(getActivity(), "Please enter a valid number", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        double resultFromCalculator = Calculator.tipsPerOnePerson(mealPrice, tipRate);
         displayResult.onUserSubmit(mealPrice, resultFromCalculator);
     }
 

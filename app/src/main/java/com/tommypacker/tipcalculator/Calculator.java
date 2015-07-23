@@ -5,14 +5,18 @@ package com.tommypacker.tipcalculator;
  */
 public abstract class Calculator {
 
-    public static double tipsPerPerson(double mealPrice, int tipRate, int numberOfPeople){
+    public static double tipsPerOnePerson(double mealPrice, int tipRate){
         double ratePercentage = (double) tipRate * .01;
         double totalTips = ratePercentage * mealPrice;
 
         totalTips = Math.round(totalTips*100);
         totalTips = totalTips/100;
 
-        return totalTips/numberOfPeople;
+        return totalTips;
+    }
+
+    public static double mealPricePerPerson(double mealPrice, int numberOfPeople){
+        return mealPrice/numberOfPeople;
     }
 
     public static double taxPrice(double mealPrice, double taxRate){
