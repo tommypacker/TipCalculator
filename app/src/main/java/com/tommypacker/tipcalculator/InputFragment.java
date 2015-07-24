@@ -90,6 +90,7 @@ public class InputFragment extends Fragment implements SplitBillDialog.onSplitSu
         FragmentManager manager = getFragmentManager();
         SplitBillDialog billSplitter = new SplitBillDialog();
         billSplitter.show(manager, "Divide Bill");
+        billSplitter.setOnSplitSubmitListener(this);
     }
 
     public void transferNumber(int numPeople){

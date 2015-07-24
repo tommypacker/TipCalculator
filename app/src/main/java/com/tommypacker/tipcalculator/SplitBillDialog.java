@@ -24,6 +24,10 @@ public class SplitBillDialog extends DialogFragment implements View.OnClickListe
         //require empty constructor for DialogFragment
     }
 
+    public void setOnSplitSubmitListener(onSplitSubmit communicator){
+        this.communicator = communicator;
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View view = inflater.inflate(R.layout.fragment_splitbill_dialog, null);
