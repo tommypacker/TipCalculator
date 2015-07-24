@@ -31,18 +31,18 @@
         android:layout_below="@+id/firstLine">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dip"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight=".6"
             android:text="@string/MealPricePrompt"
             android:layout_marginTop="25dp"
             android:textSize="18sp"/>
 
         <EditText
-            android:layout_width="50dp"
+            android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:id="@+id/MealPrice"
-            android:layout_weight="3"
+            android:layout_weight=".35"
             android:layout_marginTop="25dp"
             android:hint="@string/MealPriceHint"
             android:maxLength="6"
@@ -59,19 +59,19 @@
         android:layout_below="@id/mealPriceLine">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dip"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight=".6"
             android:text="@string/TipRatePrompt"
             android:layout_marginTop="20dp"
             android:textSize="18sp"/>
 
         <EditText
-            android:layout_width="50dp"
+            android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:id="@+id/TipRate"
             android:layout_marginTop="20dp"
-            android:layout_weight="3"
+            android:layout_weight=".35"
             android:hint="@string/TipRateHint"
             android:maxLength="3"
             android:gravity="center"
