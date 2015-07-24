@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * Created by tommypacker on 7/24/15.
@@ -47,9 +48,17 @@ public class SplitBillDialog extends DialogFragment implements View.OnClickListe
     @Override
     public void onClick(View view){
         if(view.getId()==R.id.splitButton){
-            int peopleTotal = Integer.parseInt(numberOfPeople.getText().toString());
-            communicator.transferNumber(peopleTotal);
-            dismiss();
+            if(numberOfPeople.getText().toString().equals("")) {
+                Toast.makeText(getActivity(), "Please enter a valid number of people", Toast.LENGTH_SHORT).show();
+            }
+            else if(Integer.parseInt((numberOfPeople.getText().toString()))<0){
+                Toast.makeText(getActivity(), "Please enter a valid number of people", Toast.LENGTH_SHORT).show();
+            }
+            else {
+                int peopleTotal = Integer.parseInt(numberOfPeople.getText().toString());
+                communicator.transferNumber(peopleTotal);
+                dismiss();
+            }
         }
         else{
             dismiss();

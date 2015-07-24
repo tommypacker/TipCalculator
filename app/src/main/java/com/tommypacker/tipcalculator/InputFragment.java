@@ -60,30 +60,37 @@ public class InputFragment extends Fragment implements SplitBillDialog.onSplitSu
     }
 
     public void calculateValues(){
-        double mealPrice = Double.parseDouble(price.getText().toString());
-        int tipRate = Integer.parseInt(rate.getText().toString());
-
-        if(mealPrice < 0 || tipRate < 0){
+        if(price.getText().toString().equals("") || rate.getText().toString().equals("")){
             Toast.makeText(getActivity(), "Please enter a valid number", Toast.LENGTH_SHORT).show();
-            return;
         }
+        else {
+            double mealPrice = Double.parseDouble(price.getText().toString());
+            int tipRate = Integer.parseInt(rate.getText().toString());
 
-        double resultFromCalculator = Calculator.tipsPerOnePerson(mealPrice, tipRate);
-        displayResult.onUserSubmit(mealPrice, resultFromCalculator);
+            if (mealPrice < 0 || tipRate < 0) {
+                Toast.makeText(getActivity(), "Please enter a valid number", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            double resultFromCalculator = Calculator.tipsPerOnePerson(mealPrice, tipRate);
+            displayResult.onUserSubmit(mealPrice, resultFromCalculator);
+        }
     }
 
     public void calculateSplitValues(int numPeople){
-        double mealPrice = Double.parseDouble(price.getText().toString());
-        int tipRate = Integer.parseInt(rate.getText().toString());
-
-        if(mealPrice < 0 || tipRate < 0 || numPeople < 0){
+        if(price.getText().toString().equals("") || rate.getText().toString().equals("")){
             Toast.makeText(getActivity(), "Please enter a valid number", Toast.LENGTH_SHORT).show();
-            return;
-        }
+        }else{
+            double mealPrice = Double.parseDouble(price.getText().toString());
+            int tipRate = Integer.parseInt(rate.getText().toString());
 
-        double mealPricePerPerson = Calculator.mealPricePerPerson(mealPrice, numPeople);
-        double tipsPerPerson = Calculator.tipsPerMultiplePeople(mealPrice, tipRate, numPeople);
-        displayResult.onUserSubmit(mealPricePerPerson, tipsPerPerson);
+            if(mealPrice < 0 || tipRate < 0 || numPeople < 0){
+                Toast.makeText(getActivity(), "Please enter a valid number", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            double mealPricePerPerson = Calculator.mealPricePerPerson(mealPrice, numPeople);
+            double tipsPerPerson = Calculator.tipsPerMultiplePeople(mealPrice, tipRate, numPeople);
+            displayResult.onUserSubmit(mealPricePerPerson, tipsPerPerson);
+        }
     }
 
     public void openDialog(){
