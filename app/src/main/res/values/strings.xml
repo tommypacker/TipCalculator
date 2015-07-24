@@ -2,10 +2,13 @@
     <string name="app_name">Tip Calculator</string>
     <string name="action_settings"> tempName </string>
 
-    <string name="MealPriceHint">Enter the total price of your meal</string>
-    <string name="TipRateHint">Enter the tip rate you want to pay</string>
-    <string name="PeopleTotalHint">Enter the number of people</string>
+    <string name="MealPricePrompt">Enter your Meal Price:</string>
+    <string name="TipRatePrompt">Enter your Tip Rate:</string>
+    <string name="PeopleTotalPrompt">Enter the number of people</string>
     <string name="Submit">See Your Bill</string>
+
+    <string name="MealPriceHint" >Dollars</string>
+    <string name="TipRateHint" >Percent</string>
 
     <string name="BillTitle"> Your Bill </string>
     <string name="MealPriceBill"> Meal Price: </string>
