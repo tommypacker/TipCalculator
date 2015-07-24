@@ -2,9 +2,11 @@
     <string name="app_name">Tip Calculator</string>
     <string name="action_settings"> tempName </string>
 
+
+    <string name="BillInfoTitle">Meal Pricing Info</string>
     <string name="MealPricePrompt">Enter your Meal Price:</string>
     <string name="TipRatePrompt">Enter your Tip Rate:</string>
-    <string name="PeopleTotalPrompt">Enter the number of people</string>
+    <string name="SplitBillButton">Split your Bill</string>
     <string name="Submit">See Your Bill</string>
 
     <string name="MealPriceHint" >Dollars</string>

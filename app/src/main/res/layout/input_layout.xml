@@ -6,6 +6,20 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/BillInfoTitle"
+        android:layout_gravity="center"
+        android:textSize="30sp"
+        android:layout_marginTop="25dp"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="#000000"
+        android:layout_marginTop="20dp"/>
+
     <!-- This linear layout displays the "meal price" line -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.33"
             android:text="@string/MealPricePrompt"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="25dp"
             android:textSize="18sp"/>
 
         <EditText
@@ -25,7 +39,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/MealPrice"
             android:layout_weight="0.67"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="25dp"
             android:hint="@string/MealPriceHint"
             android:gravity="center"
             android:inputType="numberSigned|numberDecimal"/>
@@ -54,16 +68,24 @@
             android:hint="@string/TipRateHint"
             android:gravity="center"
             android:inputType="numberSigned|numberDecimal"/>
-
     </LinearLayout>
-
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/splitBill"
+        android:text="@string/SplitBillButton"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"
+        android:onClick="openDialogAlert"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
         android:id="@+id/SubmitButton"
         android:text="@string/Submit"
-        android:layout_marginTop="50dp"
-        android:layout_gravity="center" />
+        android:layout_marginTop="150dp"
+        android:layout_gravity="center"
+        android:textSize="20sp"/>
 
 </LinearLayout>
