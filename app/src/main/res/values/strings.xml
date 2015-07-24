@@ -17,4 +17,7 @@
     <string name="TaxRateBill"> Taxes: </string>
     <string name="TipRateBill"> Tips: </string>
     <string name="finalTotal"> Total: </string>
+    <string name="split_bill_dialog_title">Enter the Number of People</string>
+    <string name="numPeople_hint">Number of People</string>
+    <string name="split_bill_warning">Enter a number larger than one</string>
 </resources>
