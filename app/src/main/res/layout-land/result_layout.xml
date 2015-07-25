@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="24dp"
+    android:paddingLeft="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/BillTitle"
+        android:textSize="25sp"
+        android:layout_marginTop="25dp"
+        android:textStyle="bold"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="@color/divider"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--Just displays the words "meal price on left side -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:textSize="18sp"
+            android:text="@string/MealPriceBill"
+            android:layout_weight="0.5"/>
+
+        <!--Will set the actual value of meal based on user input, placed on right side -->
+        <TextView
+            android:id="@+id/billMealPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_marginTop="17dp"
+            android:layout_weight="0.5"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--Just displays the words "tax" (rate) on left side -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textSize="17sp"
+            android:layout_weight="0.5"
+            android:text="@string/TaxRateBill" />
+
+        <!--Will set the actual value of taxes based on user input, placed on right side -->
+        <TextView
+            android:id="@+id/billTaxPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:layout_weight="0.5"
+            android:gravity="end"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--Just displays the words "tip" (rate) on left side -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:textSize="18sp"
+            android:layout_weight="0.5"
+            android:text="@string/TipRateBill" />
+
+        <!--Will set the actual value of tips based on user input, placed on right side -->
+        <TextView
+            android:id="@+id/billTipPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:layout_weight="0.5"
+            android:gravity="end"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="@color/divider"
+        android:layout_marginTop="17dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--Just displays the word Total on left side -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:textSize="18sp"
+            android:layout_weight="0.5"
+            android:text="@string/finalTotal" />
+
+        <!--Will set the actual value of the total bill based on user input, placed on right side -->
+        <TextView
+            android:id="@+id/totalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_weight="0.5"
+            android:gravity="end"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+</LinearLayout>
