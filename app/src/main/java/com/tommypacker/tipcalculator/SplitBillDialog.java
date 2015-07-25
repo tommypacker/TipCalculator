@@ -31,7 +31,7 @@ public class SplitBillDialog extends DialogFragment implements View.OnClickListe
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        View view = inflater.inflate(R.layout.fragment_splitbill_dialog, null);
+        View view = inflater.inflate(R.layout.fragment_splitbill_dialog, container, false);
         getDialog().requestWindowFeature(Window.FEATURE_NO_TITLE);
         submit = (Button) view.findViewById(R.id.splitButton);
         submit.setOnClickListener(this);

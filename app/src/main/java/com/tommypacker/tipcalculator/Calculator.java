@@ -5,8 +5,8 @@ package com.tommypacker.tipcalculator;
  */
 public abstract class Calculator {
 
-    public static double tipsPerOnePerson(double mealPrice, int tipRate){
-        double ratePercentage = (double) tipRate * .01;
+    public static double tipsPerOnePerson(double mealPrice, double tipRate){
+        double ratePercentage = tipRate * .01;
         double totalTips = ratePercentage * mealPrice;
 
         totalTips = Math.round(totalTips*100);
@@ -19,8 +19,8 @@ public abstract class Calculator {
         return mealPrice/numberOfPeople;
     }
 
-    public static double tipsPerMultiplePeople(double mealPrice, int tipRate, int numberOfPeople){
-        double ratePercentage = (double) tipRate * .01;
+    public static double tipsPerMultiplePeople(double mealPrice, double tipRate, int numberOfPeople){
+        double ratePercentage = tipRate * .01;
         double totalTips = ratePercentage * mealPrice;
 
         totalTips = Math.round(totalTips*100);

@@ -60,12 +60,12 @@ public class InputFragment extends Fragment implements SplitBillDialog.onSplitSu
     }
 
     public void calculateValues(){
-        if(price.getText().toString().equals("") || rate.getText().toString().equals("")){
+        if(price.getText().toString().equals("") || rate.getText().toString().equals("") || rate.getText().toString().equals(".")){
             Toast.makeText(getActivity(), "Please enter a valid number", Toast.LENGTH_SHORT).show();
         }
         else {
             double mealPrice = Double.parseDouble(price.getText().toString());
-            int tipRate = Integer.parseInt(rate.getText().toString());
+            double tipRate = Double.parseDouble(rate.getText().toString());
 
             if (mealPrice < 0 || tipRate < 0) {
                 Toast.makeText(getActivity(), "Please enter a valid number", Toast.LENGTH_SHORT).show();
@@ -77,11 +77,11 @@ public class InputFragment extends Fragment implements SplitBillDialog.onSplitSu
     }
 
     public void calculateSplitValues(int numPeople){
-        if(price.getText().toString().equals("") || rate.getText().toString().equals("")){
+        if(price.getText().toString().equals("") || rate.getText().toString().equals("") || rate.getText().toString().equals(".")){
             Toast.makeText(getActivity(), "Please enter a valid number", Toast.LENGTH_SHORT).show();
         }else{
             double mealPrice = Double.parseDouble(price.getText().toString());
-            int tipRate = Integer.parseInt(rate.getText().toString());
+            double tipRate = Double.parseDouble(rate.getText().toString());
 
             if(mealPrice < 0 || tipRate < 0 || numPeople < 0){
                 Toast.makeText(getActivity(), "Please enter a valid number", Toast.LENGTH_SHORT).show();
