@@ -35,7 +35,8 @@
             android:hint="@string/numPeople_hint"
             android:singleLine="true"
             android:textSize="16sp"
-            android:inputType="numberSigned|numberDecimal"/>
+            android:inputType="number"
+            android:maxLength="2"/>
 
         <Space
             android:layout_width="match_parent"

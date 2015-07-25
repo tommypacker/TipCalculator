@@ -12,7 +12,7 @@
     <string name="MealPriceHint" >Dollars</string>
     <string name="TipRateHint" >Percent</string>
 
-    <string name="BillTitle"> Your Bill </string>
+    <string name="BillTitle"> Bill per Person </string>
     <string name="MealPriceBill"> Meal Price: </string>
     <string name="TaxRateBill"> Taxes: </string>
     <string name="TipRateBill"> Tips: </string>

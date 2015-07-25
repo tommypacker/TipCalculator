@@ -12,12 +12,13 @@
         android:layout_gravity="center"
         android:text="@string/BillTitle"
         android:textSize="35sp"
-        android:layout_marginTop="25dp"/>
+        android:layout_marginTop="25dp"
+        android:textStyle="bold"/>
     
     <View
         android:layout_width="fill_parent"
         android:layout_height="2dip"
-        android:background="#000000"
+        android:background="@color/divider"
         android:layout_marginTop="20dp"/>
 
     <LinearLayout
@@ -103,7 +104,7 @@
     <View
         android:layout_width="fill_parent"
         android:layout_height="2dip"
-        android:background="#000000"
+        android:background="@color/divider"
         android:layout_marginTop="30dp"/>
 
     <LinearLayout

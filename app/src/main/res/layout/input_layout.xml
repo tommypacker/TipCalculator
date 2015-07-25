@@ -12,12 +12,13 @@
         android:text="@string/BillInfoTitle"
         android:layout_centerHorizontal="true"
         android:textSize="30sp"
-        android:id="@+id/inputTitle"/>
+        android:id="@+id/inputTitle"
+        android:textStyle="bold"/>
 
     <View
         android:layout_width="fill_parent"
         android:layout_height="2dip"
-        android:background="#000000"
+        android:background="@color/divider"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/inputTitle"
         android:id="@+id/firstLine"/>
