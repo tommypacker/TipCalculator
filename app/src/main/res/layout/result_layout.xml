@@ -47,34 +47,6 @@
 
     </LinearLayout>
 
-
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:orientation="horizontal">
-
-       <!--Just displays the words "tax" (rate) on left side -->
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="30dp"
-           android:textSize="25sp"
-           android:layout_weight="0.5"
-           android:text="@string/TaxRateBill" />
-
-       <!--Will set the actual value of taxes based on user input, placed on right side -->
-       <TextView
-           android:id="@+id/billTaxPrice"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="30dp"
-           android:layout_weight="0.5"
-           android:gravity="end"
-           android:textSize="25sp"/>
-
-   </LinearLayout>
-
-
    <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
@@ -118,7 +90,8 @@
             android:layout_marginTop="30dp"
             android:textSize="25sp"
             android:layout_weight="0.5"
-            android:text="@string/finalTotal" />
+            android:text="@string/finalTotal"
+            android:textStyle="bold"/>
 
         <!--Will set the actual value of the total bill based on user input, placed on right side -->
         <TextView
@@ -128,7 +101,8 @@
             android:layout_marginTop="30dp"
             android:layout_weight="0.5"
             android:gravity="end"
-            android:textSize="25sp"/>
+            android:textSize="25sp"
+            android:textStyle="bold"/>
     </LinearLayout>
 
 

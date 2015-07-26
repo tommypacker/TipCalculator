@@ -1,11 +1,15 @@
 package com.tommypacker.tipcalculator;
 
 import android.app.Fragment;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.text.DecimalFormat;
 
@@ -21,6 +25,8 @@ public class ResultFragment extends Fragment {
 
     public void setText(double mealPrice, double endTip){
         DecimalFormat df = new DecimalFormat("##.00");
+        SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences("pref", Context.MODE_PRIVATE);
+        boolean enableOrDisable = sharedPreferences.getBoolean("enableDisable", true);
 
         TextView mealPriceView = (TextView) getView().findViewById(R.id.billMealPrice);
         mealPriceView.setText("$"+df.format(mealPrice));

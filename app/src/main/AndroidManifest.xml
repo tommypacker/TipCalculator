@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tommypacker.tipcalculator" >
 
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,8 +18,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".DisplayBill"
-            android:label="DisplayBill" />
-
+            android:label="Final Bill" />
+        <activity android:name=".settings"
+            android:label="Settings"
+            android:parentActivityName=".MainActivity" >
+        </activity>
     </application>
 
 </manifest>

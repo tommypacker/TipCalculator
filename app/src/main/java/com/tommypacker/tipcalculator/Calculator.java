@@ -29,9 +29,4 @@ public abstract class Calculator {
         return totalTips/numberOfPeople;
     }
 
-    public static double taxPrice(double mealPrice, double taxRate){
-        double taxPercentage = taxRate/100.0;
-
-        return mealPrice * taxPercentage;
-    }
 }

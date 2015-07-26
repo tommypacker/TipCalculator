@@ -17,10 +17,15 @@
         <item name="colorControlHighlight">@color/accent</item>
     </style>
 
-    <style name="DialogTheme" parent="Theme.AppCompat.Dialog">
-
+    <style name="ColorActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
+        <!-- Title Text color -->
+        <item name="android:titleTextStyle">@style/ColorActionBarText</item>
     </style>
 
+    <style name="ColorActionBarText"
+        parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
 
 
 </resources>

@@ -3,6 +3,9 @@ package com.tommypacker.tipcalculator;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +23,7 @@ public class InputFragment extends Fragment implements SplitBillDialog.onSplitSu
 
     private onSubmit displayResult;
     private EditText price, rate;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -50,6 +54,7 @@ public class InputFragment extends Fragment implements SplitBillDialog.onSplitSu
         void onUserSubmit(double mealPrice, double finalTips);
     }
 
+    @Override
     public void onAttach(Activity activity){
         super.onAttach(activity);
         try{
@@ -67,12 +72,16 @@ public class InputFragment extends Fragment implements SplitBillDialog.onSplitSu
             double mealPrice = Double.parseDouble(price.getText().toString());
             double tipRate = Double.parseDouble(rate.getText().toString());
 
+            SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences("pref", Context.MODE_PRIVATE);
+            String gettingTax = sharedPreferences.getString("taxRate", "");
+            double tax = Double.parseDouble(gettingTax);
+
             if (mealPrice < 0 || tipRate < 0) {
                 Toast.makeText(getActivity(), "Please enter a valid number", Toast.LENGTH_SHORT).show();
                 return;
             }
-            double resultFromCalculator = Calculator.tipsPerOnePerson(mealPrice, tipRate);
-            displayResult.onUserSubmit(mealPrice, resultFromCalculator);
+            double tipsFromCalculator = Calculator.tipsPerOnePerson(mealPrice, tipRate);
+            displayResult.onUserSubmit(mealPrice, tipsFromCalculator);
         }
     }
 
@@ -87,6 +96,7 @@ public class InputFragment extends Fragment implements SplitBillDialog.onSplitSu
                 Toast.makeText(getActivity(), "Please enter a valid number", Toast.LENGTH_SHORT).show();
                 return;
             }
+
             double mealPricePerPerson = Calculator.mealPricePerPerson(mealPrice, numPeople);
             double tipsPerPerson = Calculator.tipsPerMultiplePeople(mealPrice, tipRate, numPeople);
             displayResult.onUserSubmit(mealPricePerPerson, tipsPerPerson);
@@ -104,4 +114,4 @@ public class InputFragment extends Fragment implements SplitBillDialog.onSplitSu
         calculateSplitValues(numPeople);
     }
 
-}
+    }
