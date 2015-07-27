@@ -61,32 +61,13 @@
         android:layout_below="@id/mealPriceLine">
 
         <TextView
-            android:layout_width="0dip"
-            android:layout_height="wrap_content"
-            android:layout_weight=".6"
-            android:text="@string/TipRatePrompt"
-            android:layout_marginTop="20dp"
-            android:textSize="18sp"/>
-
-        <TextView
-            android:layout_width="0dip"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/TipRate"
             android:layout_marginTop="20dp"
-            android:layout_weight=".35"/>
-
-        <!--
-        <EditText
-            android:layout_width="0dip"
-            android:layout_height="wrap_content"
-            android:id="@+id/TipRate"
-            android:layout_marginTop="20dp"
-            android:layout_weight=".35"
-            android:hint="@string/TipRateHint"
-            android:maxLength="3"
+            android:textSize="18sp"
             android:gravity="center"
-            android:inputType="numberSigned|numberDecimal"/>
-        -->
+            android:textStyle="bold"/>
 
     </LinearLayout>
 

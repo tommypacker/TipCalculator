@@ -34,14 +34,14 @@ public class InputFragment extends Fragment implements SplitBillDialog.onSplitSu
         price = (EditText) view.findViewById(R.id.MealPrice);
         SeekBar tipBar = (SeekBar) view.findViewById(R.id.tipSeekBar);
         tipView = (TextView) view.findViewById(R.id.TipRate);
-        tipView.setText(Integer.toString(tipValue));
+        tipView.setText("Tip Rate: " + Integer.toString(tipValue) + "%");
 
 
         tipBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 tipValue = progress;
-                tipView.setText(Integer.toString(progress));
+                tipView.setText("Tip Rate: " + Integer.toString(progress)+ "%");
             }
 
             @Override
