@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="About App" >
+        <Preference
+            android:title="Source"
+            android:summary="View this app's code on github"
+            android:key="viewCode" />
+        <Preference
+            android:title="Version"
+            android:enabled="false"
+            android:key="appVersion" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
