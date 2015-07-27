@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.SeekBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.zip.Inflater;
@@ -22,14 +24,34 @@ import java.util.zip.Inflater;
 public class InputFragment extends Fragment implements SplitBillDialog.onSplitSubmit{
 
     private onSubmit displayResult;
-    private EditText price, rate;
-
+    private EditText price;
+    private TextView tipView;
+    private int tipValue = 15;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View view = inflater.inflate(R.layout.input_layout, container, false);
         price = (EditText) view.findViewById(R.id.MealPrice);
-        rate = (EditText) view.findViewById(R.id.TipRate);
+        SeekBar tipBar = (SeekBar) view.findViewById(R.id.tipSeekBar);
+        tipView = (TextView) view.findViewById(R.id.TipRate);
+        tipView.setText(Integer.toString(tipValue));
+
+
+        tipBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                tipValue = progress;
+                tipView.setText(Integer.toString(progress));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
+        });
 
         Button split = (Button) view.findViewById(R.id.splitBill);
         split.setOnClickListener(new View.OnClickListener() {
@@ -65,40 +87,35 @@ public class InputFragment extends Fragment implements SplitBillDialog.onSplitSu
     }
 
     public void calculateValues(){
-        if(price.getText().toString().equals("") || rate.getText().toString().equals("") || rate.getText().toString().equals(".")){
+        if(price.getText().toString().equals("")){
             Toast.makeText(getActivity(), "Please enter a valid number", Toast.LENGTH_SHORT).show();
         }
         else {
             double mealPrice = Double.parseDouble(price.getText().toString());
-            double tipRate = Double.parseDouble(rate.getText().toString());
 
-            SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences("pref", Context.MODE_PRIVATE);
-            String gettingTax = sharedPreferences.getString("taxRate", "");
-            double tax = Double.parseDouble(gettingTax);
 
-            if (mealPrice < 0 || tipRate < 0) {
+            if (mealPrice < 0) {
                 Toast.makeText(getActivity(), "Please enter a valid number", Toast.LENGTH_SHORT).show();
                 return;
             }
-            double tipsFromCalculator = Calculator.tipsPerOnePerson(mealPrice, tipRate);
+            double tipsFromCalculator = Calculator.tipsPerOnePerson(mealPrice, tipValue);
             displayResult.onUserSubmit(mealPrice, tipsFromCalculator);
         }
     }
 
     public void calculateSplitValues(int numPeople){
-        if(price.getText().toString().equals("") || rate.getText().toString().equals("") || rate.getText().toString().equals(".")){
+        if(price.getText().toString().equals("")){
             Toast.makeText(getActivity(), "Please enter a valid number", Toast.LENGTH_SHORT).show();
         }else{
             double mealPrice = Double.parseDouble(price.getText().toString());
-            double tipRate = Double.parseDouble(rate.getText().toString());
 
-            if(mealPrice < 0 || tipRate < 0 || numPeople < 0){
+            if(mealPrice < 0 || numPeople < 0){
                 Toast.makeText(getActivity(), "Please enter a valid number", Toast.LENGTH_SHORT).show();
                 return;
             }
 
             double mealPricePerPerson = Calculator.mealPricePerPerson(mealPrice, numPeople);
-            double tipsPerPerson = Calculator.tipsPerMultiplePeople(mealPrice, tipRate, numPeople);
+            double tipsPerPerson = Calculator.tipsPerMultiplePeople(mealPrice, tipValue, numPeople);
             displayResult.onUserSubmit(mealPricePerPerson, tipsPerPerson);
         }
     }

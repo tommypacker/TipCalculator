@@ -5,7 +5,7 @@
 
     <string name="BillInfoTitle">Meal Pricing Info</string>
     <string name="MealPricePrompt">Enter your Meal Price:</string>
-    <string name="TipRatePrompt">Enter your Tip Rate:</string>
+    <string name="TipRatePrompt">Your Desired Tip Rate:</string>
     <string name="SplitBillButton">Split your Bill</string>
     <string name="Submit">See Your Bill</string>
 

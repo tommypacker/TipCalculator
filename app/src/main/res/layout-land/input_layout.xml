@@ -67,6 +67,14 @@
                 android:layout_marginTop="20dp"
                 android:textSize="18sp"/>
 
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:id="@+id/TipRate"
+                android:layout_marginTop="20dp"
+                android:layout_weight=".35"/>
+
+            <!--
             <EditText
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
@@ -77,8 +85,17 @@
                 android:maxLength="3"
                 android:gravity="center"
                 android:inputType="numberSigned|numberDecimal"/>
-
+                -->
         </LinearLayout>
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tipSeekBar"
+        android:layout_below="@+id/tipRateLine"
+        android:layout_marginTop="20dp"
+        android:progress="15"
+        android:max="50"/>
 
 
         <LinearLayout
