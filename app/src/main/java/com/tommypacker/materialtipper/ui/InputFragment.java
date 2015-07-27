@@ -48,7 +48,6 @@ public class InputFragment extends Fragment implements SplitBillDialog.onSplitSu
         tipView = (TextView) view.findViewById(R.id.TipRate);
         tipView.setText("Tip Rate: " + Integer.toString(tipValue) + "%");
 
-
         tipBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
