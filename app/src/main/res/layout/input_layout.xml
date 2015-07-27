@@ -7,95 +7,96 @@
     android:paddingRight="@dimen/activity_horizontal_margin">
 
     <TextView
+        android:id="@+id/inputTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/BillInfoTitle"
         android:layout_centerHorizontal="true"
+        android:text="@string/BillInfoTitle"
         android:textSize="30sp"
-        android:id="@+id/inputTitle"
         android:textStyle="bold"/>
 
     <View
+        android:id="@+id/firstLine"
         android:layout_width="fill_parent"
         android:layout_height="2dip"
-        android:background="@color/divider"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/inputTitle"
-        android:id="@+id/firstLine"/>
+        android:background="@color/divider" />
 
     <!-- This linear layout displays the "meal price" line -->
     <LinearLayout
+        android:id="@+id/mealPriceLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/mealPriceLine"
-        android:layout_below="@+id/firstLine">
+        android:layout_below="@+id/firstLine"
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_weight=".6"
-            android:text="@string/MealPricePrompt"
             android:layout_marginTop="25dp"
+            android:text="@string/MealPricePrompt"
             android:textSize="18sp"/>
 
         <EditText
+            android:id="@+id/MealPrice"
             android:layout_width="0dip"
             android:layout_height="wrap_content"
-            android:id="@+id/MealPrice"
             android:layout_weight=".35"
             android:layout_marginTop="25dp"
+            android:gravity="center"
             android:hint="@string/MealPriceHint"
             android:maxLength="6"
-            android:gravity="center"
             android:inputType="numberSigned|numberDecimal"/>
 
     </LinearLayout>
 
 
-    <!-- This linear layout displays the "tip rate" line -->
+    <!-- This linear layout displays the "tip rate" -->
     <LinearLayout
+        android:id="@+id/tipRateLine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tipRateLine"
         android:layout_below="@id/mealPriceLine">
 
+        <!-- This Textview is changed dynamically through code -->
         <TextView
+            android:id="@+id/TipRate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TipRate"
             android:layout_marginTop="20dp"
-            android:textSize="18sp"
             android:gravity="center"
+            android:textSize="18sp"
             android:textStyle="bold"/>
 
     </LinearLayout>
 
     <SeekBar
+        android:id="@+id/tipSeekBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tipSeekBar"
         android:layout_below="@+id/tipRateLine"
         android:layout_marginTop="20dp"
         android:progress="15"
         android:max="50"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/splitBill"
         android:text="@string/SplitBillButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/tipSeekBar"/>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
         android:id="@+id/SubmitButton"
         android:text="@string/Submit"
-        android:layout_centerHorizontal="true"
         android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>
