@@ -6,6 +6,10 @@
             android:summary="View this app's code on github"
             android:key="viewCode" />
         <Preference
+            android:title="Licenses"
+            android:summary="View libraries used in this app"
+            android:key="licenses" />
+        <Preference
             android:title="Version"
             android:enabled="false"
             android:key="appVersion" />
