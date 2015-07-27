@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.tommypacker.tipcalculator.ui;
+package com.tommypacker.materialtipper.ui;
 
 import android.app.DialogFragment;
 import android.os.Bundle;
@@ -26,7 +26,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.tommypacker.tipcalculator.R;
+import com.tommypacker.materialtipper.R;
 
 public class SplitBillDialog extends DialogFragment implements View.OnClickListener{
 

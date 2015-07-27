@@ -11,7 +11,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:id="@+id/UserInput"
-        class="com.tommypacker.tipcalculator.ui.InputFragment"/>
+        class="com.tommypacker.materialtipper.ui.InputFragment"/>
 
 
 </LinearLayout>

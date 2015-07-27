@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.tommypacker.tipcalculator.ui;
+package com.tommypacker.materialtipper.ui;
 
 import android.app.Fragment;
 import android.content.Context;
@@ -25,9 +25,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.tommypacker.tipcalculator.R;
-
-import org.w3c.dom.Text;
+import com.tommypacker.materialtipper.R;
 
 import java.text.DecimalFormat;
 

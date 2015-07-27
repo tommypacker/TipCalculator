@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package com.tommypacker.tipcalculator;
+package com.tommypacker.materialtipper;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.tommypacker.tipcalculator.ui.ResultFragment;
+import com.tommypacker.materialtipper.ui.ResultFragment;
 
 public class DisplayBill extends AppCompatActivity {
 

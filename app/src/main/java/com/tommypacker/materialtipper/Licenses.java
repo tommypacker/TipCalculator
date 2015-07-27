@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.tommypacker.tipcalculator;
+package com.tommypacker.materialtipper;
 
 import java.util.Arrays;
 import java.util.List;

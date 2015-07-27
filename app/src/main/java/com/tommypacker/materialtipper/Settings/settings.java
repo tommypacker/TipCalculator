@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.tommypacker.tipcalculator.Settings;
+package com.tommypacker.materialtipper.Settings;
 
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import com.tommypacker.tipcalculator.R;
+import com.tommypacker.materialtipper.R;
 
 public class settings extends AppCompatActivity {
 

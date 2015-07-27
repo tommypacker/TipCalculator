@@ -1,4 +1,4 @@
-package com.tommypacker.tipcalculator;
+package com.tommypacker.materialtipper;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

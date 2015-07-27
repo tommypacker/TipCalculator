@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.tommypacker.tipcalculator.ui;
+package com.tommypacker.materialtipper.ui;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -29,8 +29,8 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.tommypacker.tipcalculator.Calculator;
-import com.tommypacker.tipcalculator.R;
+import com.tommypacker.materialtipper.Calculator;
+import com.tommypacker.materialtipper.R;
 
 
 public class InputFragment extends Fragment implements SplitBillDialog.onSplitSubmit {
@@ -117,7 +117,8 @@ public class InputFragment extends Fragment implements SplitBillDialog.onSplitSu
     public void calculateSplitValues(int numPeople){
         if(price.getText().toString().equals("")){
             Toast.makeText(getActivity(), "Please enter a valid number", Toast.LENGTH_SHORT).show();
-        }else{
+        }
+        else {
             double mealPrice = Double.parseDouble(price.getText().toString());
 
             if(mealPrice < 0 || numPeople < 0){

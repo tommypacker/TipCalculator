@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.tommypacker.tipcalculator.Settings;
+package com.tommypacker.materialtipper.Settings;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -22,13 +22,10 @@ import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 
-import com.tommypacker.tipcalculator.Licenses;
-import com.tommypacker.tipcalculator.R;
-
-import java.util.List;
+import com.tommypacker.materialtipper.Licenses;
+import com.tommypacker.materialtipper.R;
 
 import de.psdev.licensesdialog.LicensesDialog;
-import de.psdev.licensesdialog.licenses.License;
 
 public class settingsFragment extends PreferenceFragment {
 
