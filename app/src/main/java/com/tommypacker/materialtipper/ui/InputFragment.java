@@ -19,6 +19,8 @@ package com.tommypacker.materialtipper.ui;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -48,11 +50,12 @@ public class InputFragment extends Fragment implements SplitBillDialog.onSplitSu
         tipView = (TextView) view.findViewById(R.id.TipRate);
         tipView.setText("Tip Rate: " + Integer.toString(tipValue) + "%");
 
+
         tipBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 tipValue = progress;
-                tipView.setText("Tip Rate: " + Integer.toString(progress)+ "%");
+                tipView.setText("Tip Rate: " + Integer.toString(progress) + "%");
             }
 
             @Override

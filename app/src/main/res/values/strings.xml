@@ -9,7 +9,7 @@
     <string name="SplitBillButton">Split your Bill</string>
     <string name="Submit">See Your Bill</string>
 
-    <string name="MealPriceHint" >Dollars</string>
+    <string name="MealPriceHint" >Cost</string>
     <string name="TipRateHint" >Percent</string>
 
     <string name="BillTitle"> Bill per Person </string>
@@ -22,5 +22,27 @@
     <string name="split_bill_warning">Enter the number of people</string>
     <string name="submit_button_splitDialog">Submit</string>
     <string name="cancel_button_splitDialog">Cancel</string>
+
+    <string-array name="currencies">
+        <item>Dollars</item>
+        <item>Euros</item>
+        <item>Yen</item>
+        <item>Yuan</item>
+        <item>Ruble</item>
+        <item>Rupee</item>
+        <item>Krone</item>
+        <item>Real</item>
+    </string-array>
+
+    <string-array name="currencySymbols">
+        <item>$</item>
+        <item>€</item>
+        <item>¥</item>
+        <item>¥</item>
+        <item>₽</item>
+        <item>₹</item>
+        <item>kr</item>
+        <item>R$</item>
+    </string-array>
 
 </resources>

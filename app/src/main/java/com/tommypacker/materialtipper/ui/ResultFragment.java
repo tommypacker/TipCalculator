@@ -38,7 +38,6 @@ public class ResultFragment extends Fragment {
 
     public void setText(double mealPrice, double endTip){
         DecimalFormat df = new DecimalFormat("##.00");
-        SharedPreferences sharedPreferences = this.getActivity().getSharedPreferences("pref", Context.MODE_PRIVATE);
 
         TextView mealPriceView = (TextView) getView().findViewById(R.id.billMealPrice);
         mealPriceView.setText("$"+df.format(mealPrice));
